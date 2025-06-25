@@ -1,0 +1,49 @@
+======================================================
+AUTOMATIZADOR DE PROMPTS PARA IA - VERSIÓN 6 (v6)
+======================================================
+
+DESCRIPCIÓN:
+------------
+Mejora de la experiencia de usuario con mensajes de confirmación más claros,
+indicadores de carga más visibles y feedback de éxito tras completar operaciones.
+Esta versión se enfoca en hacer la aplicación más amigable, intuitiva y proporcionar
+mejor retroalimentación al usuario durante los procesos.
+
+ARCHIVOS MODIFICADOS:
+---------------------
+1. /automatizador/hooks/useAutomatizador.js
+   - Añadido nuevo estado para mensajes de éxito
+   - Actualizado el manejo de mensajes en todas las funciones
+   - Mejorado el feedback al usuario en operaciones CRUD
+
+2. /automatizador/components/GeneracionPreguntas.js
+   - Mejorados indicadores de carga con estilos más visibles
+   - Añadidos mensajes de éxito al generar preguntas
+   - Implementados mensajes de ayuda durante la carga
+
+3. /automatizador/components/PromptFinal.js
+   - Añadidos mensajes de éxito al generar el prompt final
+   - Mejorados indicadores visuales durante la carga
+   - Implementada visualización condicional de mensajes
+
+4. /automatizador/page.js
+   - Actualizada la propagación de props para incluir mensajes de éxito
+
+CAMBIOS FUNCIONALES:
+--------------------
+- Nuevos mensajes de confirmación tras operaciones exitosas:
+  * Generación de preguntas
+  * Generación de prompt final
+  * Guardado de prompts
+- Indicadores de carga más grandes y claros durante las peticiones a la API
+- Mensajes informativos durante los tiempos de espera
+- Limpieza automática de mensajes al cambiar de paso
+- Mejor gestión del estado global de la aplicación
+
+MEJORAS DE EXPERIENCIA DE USUARIO:
+----------------------------------
+- Feedback inmediato tras completar operaciones
+- Mayor visibilidad del estado del sistema 
+- Claridad sobre el progreso de las operaciones
+- Distinción visual clara entre mensajes de error y éxito
+- Mensajes específicos que indican el número de preguntas generadas

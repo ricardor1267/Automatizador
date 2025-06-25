@@ -1,0 +1,36 @@
+======================================================
+AUTOMATIZADOR DE PROMPTS PARA IA - VERSIÓN 2 (v2)
+======================================================
+
+DESCRIPCIÓN:
+------------
+Se ha modificado el módulo para eliminar la validación del formato JSON 
+en el paso 2 (Estructura de Datos), permitiendo al usuario ingresar cualquier 
+texto sin verificar su sintaxis.
+
+ARCHIVOS MODIFICADOS:
+---------------------
+1. /automatizador/components/EstructuraDatos.js
+   - Eliminada la validación de formato JSON
+   - Eliminados mensajes de error de validación
+   - Eliminada la visualización condicional de clases CSS para estados de error
+
+2. /automatizador/hooks/useAutomatizador.js
+   - Eliminado el estado jsonValido
+   - Eliminada la función validarJSON
+   - Modificada la función irAlPaso para eliminar la validación del formato JSON
+   - Eliminadas las referencias a validación de JSON en los valores de retorno
+
+3. /automatizador/page.js
+   - Eliminadas las props relacionadas con la validación del JSON que se pasaban al componente EstructuraDatos
+
+CAMBIOS FUNCIONALES:
+--------------------
+- El usuario ahora puede ingresar cualquier texto en el campo de estructura de datos
+- Se permite avanzar al siguiente paso sin validar que el formato JSON sea correcto
+- Se mantiene la validación de que el campo no esté vacío
+
+NOTAS:
+------
+- La validación de formato se realizará en el backend si es necesario
+- El usuario es responsable de ingresar una estructura de datos correcta

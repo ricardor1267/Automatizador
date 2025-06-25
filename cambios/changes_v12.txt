@@ -1,0 +1,35 @@
+Cambios en la versión v12 del módulo Automatizador
+
+Fecha: 15/04/2025
+
+Resumen:
+Se ha desarrollado un módulo completo para la gestión de prompts en Next.js, con conexión a una API Strapi. El módulo permite listar, crear, editar y eliminar prompts, así como consultar la estructura de tablas en la base de datos para incluirla en los prompts.
+
+Características implementadas:
+- Separación de la lógica de negocio (hooks y servicios) de la presentación (componentes)
+- Interfaz en español con un diseño de wizard de 3 pasos
+- Integración con la API Strapi para CRUD de prompts
+- Consulta de esquemas de tablas para incluirlos en prompts
+- Validación de formularios
+- Notificaciones con toast
+- Diseño responsive
+
+Archivos modificados:
+1. /automatizador/page.js - Punto de entrada del módulo
+2. /automatizador/automatizador.css - Estilos específicos del módulo
+3. /automatizador/components/PromptList.js - Componente para listar prompts
+4. /automatizador/components/PromptForm.js - Formulario para crear/editar prompts
+5. /automatizador/components/StepWizard.js - Componente para controlar el flujo del wizard
+6. /automatizador/hooks/usePrompts.js - Hook con la lógica de negocio
+7. /automatizador/services/api.js - Servicio para interactuar con la API
+
+Notas adicionales:
+- Se mantiene el token de autenticación en localStorage para las peticiones a la API
+- Se integra con el módulo de esquemas existente para consultar estructuras de tablas
+- Se utiliza un enfoque de formulario por pasos para mejorar la experiencia de usuario
+
+Próximos pasos:
+- Implementar filtros avanzados para la lista de prompts
+- Agregar la posibilidad de previsualizar prompts
+- Implementar un sistema de categorías para organizar prompts
+- Mejorar la validación y el manejo de errores

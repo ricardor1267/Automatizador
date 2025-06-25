@@ -1,0 +1,46 @@
+======================================================
+AUTOMATIZADOR DE PROMPTS PARA IA - VERSIÓN 4 (v4)
+======================================================
+
+DESCRIPCIÓN:
+------------
+Se ha integrado directamente la API de OpenAI para la generación de preguntas y prompts finales,
+eliminando la dependencia del backend de Strapi para estas funcionalidades. El módulo ahora
+se comunica directamente con OpenAI para obtener respuestas más rápidas y precisas.
+
+ARCHIVOS CREADOS:
+-----------------
+1. /automatizador/services/openai.js
+   - Nuevo servicio para comunicación directa con la API de OpenAI
+   - Implementación de funciones para generar preguntas y prompts finales
+   - Configuración del modelo GPT-4o para obtener resultados de alta calidad
+
+ARCHIVOS MODIFICADOS:
+---------------------
+1. /automatizador/hooks/useAutomatizador.js
+   - Actualizado para utilizar el nuevo servicio de OpenAI
+   - Modificada la función generarPreguntasIA para procesar respuestas de OpenAI
+   - Modificada la función generarPromptFinalIA para procesar respuestas de OpenAI
+   - Eliminadas referencias a las funciones del API de Strapi para estas operaciones
+
+CAMBIOS FUNCIONALES:
+--------------------
+- Generación de preguntas más relevantes y contextuales usando GPT-4o
+- Procesamiento mejorado de las respuestas de la IA para extraer preguntas en formato limpio
+- Prompt final más estructurado y detallado basado en el contexto completo
+- Mayor independencia del backend para la lógica de IA
+- Mantenimiento de la comunicación con Strapi solo para operaciones de guardado y recuperación de prompts
+
+NOTAS TÉCNICAS:
+--------------
+- Se usa el modelo "gpt-4o" para obtener respuestas de alta calidad
+- Se implementa manejo de errores robusto para la comunicación con la API externa
+- Se mantiene una estructura adaptada a diferentes formatos de respuesta
+- Se procesa la respuesta para extraer las preguntas en formato limpio
+- La clave de API se almacena en el servicio (en producción debería moverse a variables de entorno)
+
+PRÓXIMOS PASOS:
+--------------
+- Considerar mover la clave de API a variables de entorno por seguridad
+- Implementar caché para reducir llamadas a la API
+- Añadir opciones para seleccionar diferentes modelos de IA

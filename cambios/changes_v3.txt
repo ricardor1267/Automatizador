@@ -1,0 +1,31 @@
+======================================================
+AUTOMATIZADOR DE PROMPTS PARA IA - VERSIÓN 3 (v3)
+======================================================
+
+DESCRIPCIÓN:
+------------
+Se ha mejorado la visualización de los prompts guardados, añadiendo la estructura de datos JSON 
+tanto en la tabla de listado como en el modal de detalle. Esto permite a los usuarios ver 
+toda la información relacionada con cada prompt de manera más completa y accesible.
+
+ARCHIVOS MODIFICADOS:
+---------------------
+1. /automatizador/components/PromptsGuardados.js
+   - Añadidas columnas para la descripción del proyecto y la estructura JSON en la tabla
+   - Añadido campo para visualizar la estructura JSON en el modal de detalle
+   - Mejorado el formato visual con bordes y fondos para mejor legibilidad
+   - Implementada truncación de texto largo con estilo text-truncate en la tabla
+
+CAMBIOS FUNCIONALES:
+--------------------
+- La tabla ahora muestra una vista previa de la descripción del proyecto
+- La tabla ahora muestra una vista previa de la estructura JSON
+- El modal de detalle ahora muestra la estructura JSON completa
+- Formateado mejorado usando elementos pre y code para la estructura JSON
+- Mejor organización visual del contenido con márgenes y estilos adicionales
+
+NOTAS:
+------
+- Las vistas previas en la tabla están limitadas con maxWidth para evitar que la tabla se extienda demasiado
+- Se usa el elemento <pre> para mantener el formato original del JSON
+- Se ha mejorado la legibilidad usando fondos claros y bordes para cada sección

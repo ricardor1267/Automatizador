@@ -1,0 +1,170 @@
+/* Estilos para el automatizador de prompts */
+
+/* Estilos para selector de proveedores */
+.proveedor-card {
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.proveedor-card:hover {
+  border-color: #5D87FF;
+  box-shadow: 0 4px 15px rgba(93, 135, 255, 0.15);
+}
+
+.proveedor-selected {
+  border-color: #5D87FF;
+  border-width: 2px;
+  background-color: rgba(93, 135, 255, 0.05);
+  box-shadow: 0 4px 15px rgba(93, 135, 255, 0.15);
+}
+/* Estilos para el módulo Automatizador de Prompts para IA */
+
+/* Estilos para los pasos de progreso */
+.progress-steps {
+  margin: 30px 0;
+}
+
+.progress-step {
+  text-align: center;
+  position: relative;
+  padding: 0 10px 20px;
+}
+
+.progress-step::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background-color: #e9ecef;
+  z-index: 1;
+}
+
+.progress-step:last-child::after {
+  display: none;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #6c757d;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.step-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #495057;
+}
+
+.step-description {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* Estilos para paso activo */
+.progress-step.active .step-number {
+  background-color: #5d87ff;
+  color: white;
+}
+
+.progress-step.active .step-title {
+  color: #5d87ff;
+}
+
+/* Estilos para pasos completados */
+.progress-step.completed .step-number {
+  background-color: #13deb9;
+  color: white;
+}
+
+.progress-step.completed::after {
+  background-color: #13deb9;
+}
+
+/* Estilos para las preguntas */
+.pregunta-card {
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.pregunta-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el editor JSON */
+.json-editor {
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  height: 300px;
+  resize: vertical;
+}
+
+.json-invalid {
+  border-color: #fa896b !important;
+  background-color: rgba(250, 137, 107, 0.05);
+}
+
+/* Estilos para prompts guardados */
+.prompts-guardados-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Estilos para el prompt final */
+.prompt-final-container {
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+/* Estilos para los esquemas disponibles */
+.esquema-item {
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+.esquema-item:hover {
+  background-color: rgba(93, 135, 255, 0.1);
+}
+
+/* Estilos para responsive */
+@media (max-width: 768px) {
+  .step-number {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.9rem;
+  }
+  
+  .step-title {
+    font-size: 0.9rem;
+  }
+  
+  .step-description {
+    font-size: 0.75rem;
+  }
+}

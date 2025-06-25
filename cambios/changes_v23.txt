@@ -1,0 +1,37 @@
+# Cambios en la versión v23 del módulo Automatizador
+
+## Resumen de cambios
+
+Se ha corregido un error crítico en el componente EstructuraDatos.js que impedía avanzar al paso 2 del módulo debido a una referencia a una propiedad undefined.
+
+## Problema solucionado
+
+Error: `TypeError: Cannot read properties of undefined (reading 'displayName')`
+
+Este error ocurría en el paso 2 del módulo cuando se intentaba mostrar el listado de esquemas disponibles. El problema específicamente estaba en la línea que intentaba acceder a `esquema.info.displayName` pero el objeto `esquema.info` podía ser undefined en algunos casos.
+
+## Solución implementada
+
+1. Se ha creado una función auxiliar `getNombreEsquema` que maneja de forma segura diferentes estructuras posibles del objeto esquema:
+   - Verifica si existe esquema.info.displayName o esquema.info.singularName
+   - Si no existe, intenta usar esquema.nombre
+   - Si tampoco existe, extrae el nombre del esquema.uid
+   - Como último recurso, genera un nombre aleatorio
+
+2. Se ha añadido una clave segura para los elementos del DropdownMenu:
+   - Usa esquema.uid si existe
+   - Si no existe, genera un ID aleatorio
+
+## Mejoras adicionales
+
+- Mayor robustez en el manejo de datos potencialmente undefined
+- Mejor experiencia de usuario al manejar graciosamente estructuras de datos incompletas
+- El componente ahora puede trabajar con diferentes formatos de esquemas
+
+## Archivos modificados
+
+1. `/components/EstructuraDatos.js` - Corrección del error y mejora en el manejo de esquemas
+
+## Próximos pasos
+
+Se recomienda revisar otras partes del código que puedan tener problemas similares con propiedades potencialmente undefined, especialmente al trabajar con datos provenientes de la API.

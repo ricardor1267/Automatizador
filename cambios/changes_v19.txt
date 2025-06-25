@@ -1,0 +1,50 @@
+Versión v19
+Fecha: 15 de abril de 2025
+
+Corrección de errores en el guardado de prompts y visualización
+==============================================================
+
+Cambios realizados:
+------------------
+
+1. Corrección del error de función para guardar prompts
+   - Se corrigió el componente PromptFinal.js para usar la función correcta (guardarPrompt en lugar de guardarPromptGenerado)
+   - Se actualizaron las props y nombres de funciones para mantener consistencia
+
+2. Creación de un servicio dedicado para gestión de prompts
+   - Se creó promptService.js para centralizar la lógica de acceso a la API
+   - Se implementó correctamente el guardado de prompts con tipos y permisos
+   - Se configuró para que los prompts se guarden como tipo "Desarrollo" y permiso "Privado" por defecto
+
+3. Mejora en la visualización de prompts guardados
+   - Se actualizó el componente PromptsGuardados para manejar diferentes estructuras de datos
+   - Se añadieron funciones auxiliares para obtener tipos y permisos de las relaciones
+   - Se corrigieron los nombres de campos para coincidir con la estructura real de la API
+
+4. Actualización del hook useAutomatizador
+   - Se actualizaron las importaciones para usar el nuevo servicio
+   - Se mejoró el procesamiento de datos para adaptarse a la estructura de Strapi v4
+   - Se corrigió la manipulación de datos al guardar y cargar prompts
+
+Archivos modificados:
+--------------------
+
+1. /components/PromptFinal.js
+2. /hooks/useAutomatizador.js
+3. /components/PromptsGuardados.js
+4. /services/promptService.js (nuevo)
+
+Solución de errores:
+------------------
+
+- Se solucionó el error "TypeError: guardarPromptGenerado is not a function"
+- Se corrigió el problema de visualización de prompts en el listado lateral
+- Se implementó el guardado de prompts con tipo "Desarrollo" y permiso "Privado" 
+- Se mejoró la gestión de errores en la comunicación con la API
+
+Notas adicionales:
+----------------
+
+- Las mejoras mantienen la compatibilidad con la estructura de datos de Strapi v4
+- Se han implementado soluciones para manejar diferentes estructuras de respuesta
+- El módulo ahora gestiona correctamente las relaciones entre tablas al guardar y mostrar prompts

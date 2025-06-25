@@ -1,0 +1,60 @@
+======================================================
+AUTOMATIZADOR DE PROMPTS PARA IA - VERSIÓN 1 (v1)
+======================================================
+
+DESCRIPCIÓN:
+------------
+Implementación inicial del módulo "Automatizador de Prompts para IA" en Next.js.
+Este módulo permite generar prompts detallados para IA, siguiendo un proceso
+de 4 pasos que incluye descripción del proyecto, estructura de datos,
+generación de preguntas por IA y presentación del prompt final.
+
+ARCHIVOS CREADOS:
+-----------------
+1. /automatizador/page.js
+   - Página principal del módulo que integra todos los componentes
+
+2. /automatizador/automatizador.css
+   - Estilos específicos del módulo
+
+3. /automatizador/services/api.js
+   - Servicio para comunicación con la API de Strapi
+
+4. /automatizador/hooks/useAutomatizador.js
+   - Hook personalizado que maneja el estado y la lógica del módulo
+
+5. /automatizador/components/ProgressSteps.js
+   - Componente para mostrar la progresión entre los 4 pasos
+
+6. /automatizador/components/DescripcionProyecto.js
+   - Componente para el paso 1: Ingreso de la descripción del proyecto
+
+7. /automatizador/components/EstructuraDatos.js
+   - Componente para el paso 2: Ingreso de la estructura de datos JSON
+
+8. /automatizador/components/GeneracionPreguntas.js
+   - Componente para el paso 3: Generación y respuesta de preguntas
+
+9. /automatizador/components/PromptFinal.js
+   - Componente para el paso 4: Prompt final generado
+
+10. /automatizador/components/PromptsGuardados.js
+    - Componente para mostrar y gestionar los prompts guardados
+
+CARACTERÍSTICAS IMPLEMENTADAS:
+------------------------------
+- Flujo de trabajo en 4 pasos con indicadores de progreso
+- Validación de JSON en tiempo real
+- Integración con API de Strapi para comunicación con backend
+- Generación automática de preguntas basadas en la descripción y estructura
+- Capacidad para guardar y reutilizar prompts
+- Diseño responsivo adaptado al estilo del template existente
+- Interfaz en español
+
+PRÓXIMOS PASOS PARA FUTURAS VERSIONES:
+--------------------------------------
+- Implementar historial de interacciones
+- Añadir categorización de prompts
+- Mejorar validaciones en formularios
+- Implementar sistema de usuarios y permisos
+- Añadir exportación de prompts a diferentes formatos

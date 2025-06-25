@@ -1,0 +1,59 @@
+======================================================
+AUTOMATIZADOR DE PROMPTS PARA IA - VERSIÓN 8 (v8)
+======================================================
+
+DESCRIPCIÓN:
+------------
+Se ha mejorado la integración con Strapi, optimizado el servicio de OpenAI 
+y agregado funcionalidades para gestionar esquemas JSON de la base de datos. 
+También se han actualizado las funcionalidades para cargar y eliminar prompts
+guardados previamente.
+
+ARCHIVOS MODIFICADOS:
+---------------------
+1. /automatizador/services/api.js
+   - Mejorada la integración con Strapi a través de endpoints actualizados
+   - Agregada funcionalidad para obtener esquemas de la base de datos
+   - Añadidas funciones para obtener un prompt específico y eliminar prompts
+   - Actualizada la función para guardar prompts incluyendo el esquema JSON
+
+2. /automatizador/services/openai.js
+   - Aumentado el límite de tokens de 2000 a 3000 para respuestas más completas
+   - Mejorado el sistema para generar el prompt final incluyendo el texto 
+     de conocimiento requerido al principio del prompt
+
+3. /automatizador/hooks/useAutomatizador.js
+   - Agregado estado para manejar esquemas JSON y esquemas disponibles
+   - Implementadas funciones para cargar esquemas desde la API de Strapi
+   - Añadidas funciones para cargar y eliminar prompts guardados
+   - Mejorada la función de guardado para incluir el esquema JSON
+
+4. /automatizador/components/EstructuraDatos.js
+   - Agregada funcionalidad para seleccionar esquemas disponibles
+   - Implementado un dropdown para facilitar la selección de esquemas
+   - Mejorada la interfaz para mostrar información sobre el uso de esquemas
+
+5. /automatizador/components/PromptsGuardados.js
+   - Agregados botones para cargar y eliminar prompts guardados
+   - Implementado modal de confirmación para eliminar prompts
+   - Mejorada la visualización de la información de los prompts
+   - Optimizada la interfaz para mostrar más datos en menos espacio
+
+6. /automatizador/page.js
+   - Actualizadas las props pasadas a los componentes para incluir las nuevas funcionalidades
+   - Pasadas las nuevas funciones a los componentes correspondientes
+
+CAMBIOS FUNCIONALES:
+--------------------
+- Ahora es posible seleccionar esquemas de la base de datos para usar como estructura
+- Se pueden cargar prompts guardados previamente para continuar trabajando en ellos
+- Se pueden eliminar prompts guardados que ya no sean necesarios
+- El límite de tokens para las respuestas de OpenAI se ha aumentado a 3000
+- El prompt final incluye el texto de conocimiento requerido al principio
+
+OBJETIVO DEL CAMBIO:
+------------------
+El objetivo principal de esta actualización es mejorar la integración con Strapi
+y permitir el uso de esquemas JSON de la base de datos para facilitar el proceso
+de creación de prompts. También se busca mejorar la gestión de prompts guardados
+y optimizar las respuestas de OpenAI para obtener resultados más completos.

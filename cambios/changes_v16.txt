@@ -1,0 +1,43 @@
+Versión v16
+Fecha: 15 de abril de 2025
+
+Refactorización y optimización del buscador de esquemas
+=======================================================
+
+Cambios realizados:
+------------------
+
+1. Refactorización del hook useTablaData
+   - Se modificó el hook para aceptar valores iniciales de tabla y límite
+   - Se agregó la función formatearEsquemaYDatos para generar el texto JSON formateado
+   - Se mejoró la reutilización del código existente
+
+2. Actualización del hook useEsquemaBusqueda
+   - Se eliminó la lógica duplicada al reutilizar useTablaData
+   - Se mejoró el manejo de errores y las notificaciones al usuario
+   - Se optimizó la integración con el flujo de trabajo del automatizador
+
+3. Eliminación del servicio schemaService
+   - Se eliminó el servicio redundante en favor de reutilizar el código existente
+   - Se mantuvo la consistencia en la estructura y comportamiento
+
+Archivos modificados:
+--------------------
+
+1. /hooks/useEsquemaBusqueda.js (actualizado)
+2. /app/(DashboardLayout)/mining/esquemas/hooks/useTablaData.js (actualizado)
+
+Mejoras implementadas:
+--------------------
+
+- Mejor reutilización de código entre módulos
+- Reducción de código duplicado y mantenimiento más sencillo
+- Mayor consistencia en el comportamiento al utilizar la misma lógica de negocio
+- Optimización del rendimiento al eliminar servicios redundantes
+
+Notas adicionales:
+----------------
+
+- Esta refactorización sigue el principio DRY (Don't Repeat Yourself) para evitar duplicación de código
+- Se mantiene la separación entre lógica de negocio y presentación
+- Las mejoras no afectan a la funcionalidad existente en el módulo esquemas

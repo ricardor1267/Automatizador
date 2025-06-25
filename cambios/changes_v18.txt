@@ -1,0 +1,39 @@
+Versión v18
+Fecha: 15 de abril de 2025
+
+Adición de documentación completa para el módulo
+================================================
+
+Cambios realizados:
+------------------
+
+1. Creación de un archivo README.md detallado
+   - Descripción general del módulo y sus funcionalidades
+   - Explicación de la estructura de archivos y organización
+   - Guía de uso paso a paso para cada etapa del proceso
+   - Instrucciones técnicas para desarrolladores y migración
+
+2. Documentación completa de la integración de esquemas
+   - Explicación detallada de cómo utilizar la consulta de esquemas
+   - Descripción de la integración con el módulo existente
+   - Consideraciones técnicas sobre autenticación y configuración
+
+Archivos modificados:
+--------------------
+
+1. README.md (nuevo)
+
+Beneficios:
+----------
+
+- Facilita la comprensión del módulo para nuevos desarrolladores
+- Proporciona documentación de referencia para los usuarios
+- Establece pautas claras para futuras ampliaciones
+- Documenta las decisiones de arquitectura y diseño
+
+Notas adicionales:
+----------------
+
+- La documentación servirá como referencia para el equipo de desarrollo
+- Se incluyen instrucciones específicas para la migración a producción
+- El formato markdown permite una fácil lectura tanto en editores como en GitHub

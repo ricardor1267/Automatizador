@@ -1,0 +1,50 @@
+======================================================
+AUTOMATIZADOR DE PROMPTS PARA IA - VERSIÓN 9 (v9)
+======================================================
+
+DESCRIPCIÓN:
+------------
+Se ha actualizado el módulo para integrarse correctamente con el esquema de 
+la tabla de prompts en Strapi. Ahora el sistema guarda los prompts generados
+en el campo 'prompt' con un título corto generado automáticamente en el campo
+'nombrePrompt'. Además, se asigna automáticamente el tipo 'Desarrollo' y 
+el permiso 'Privado'.
+
+ARCHIVOS MODIFICADOS:
+---------------------
+1. /automatizador/services/api.js
+   - Actualizada la función guardarPrompt para usar la estructura correcta de la tabla
+   - Implementada la función para generar títulos cortos automáticamente
+   - Actualizada la función obtenerPrompts para adaptarse a la estructura de Strapi
+   - Simplificada la estructura de datos para obtener y mostrar prompts
+
+2. /automatizador/hooks/useAutomatizador.js
+   - Modificada la función guardarPromptGenerado para no requerir nombre
+   - Actualizada la función cargarPrompt para manejar la nueva estructura
+   - Simplificados los datos recuperados según la estructura real
+
+3. /automatizador/components/PromptFinal.js
+   - Eliminado el campo de entrada para nombre del prompt
+   - Actualizado el modal de guardado para reflejar el guardado automático
+   - Mejorada la interfaz con iconos y mensajes más claros
+
+4. /automatizador/components/PromptsGuardados.js
+   - Rediseñado para mostrar solo el nombrePrompt en la lista principal
+   - Implementado modal con detalles completos al hacer clic en un prompt
+   - Mejorada la visualización con badges para tipo y permiso
+   - Optimizada la interfaz para mostrar solo la información relevante
+
+CAMBIOS FUNCIONALES:
+--------------------
+- Los prompts se guardan automáticamente con un título generado a partir de la descripción
+- Se asigna automáticamente el tipo 'Desarrollo' y permiso 'Privado' a los prompts guardados
+- La lista de prompts guardados muestra solo el título y fecha, con detalles en modal
+- La carga de un prompt recupera ahora directamente el campo 'prompt' de la base de datos
+- El proceso de guardado es ahora más simple y requiere menos intervención del usuario
+
+OBJETIVO DEL CAMBIO:
+------------------
+El objetivo principal de esta actualización es adaptar el módulo para que se integre
+correctamente con la estructura de la tabla de prompts en Strapi, simplificando el
+proceso de guardado y recuperación de prompts y mejorando la experiencia del usuario
+al interactuar con los prompts guardados.

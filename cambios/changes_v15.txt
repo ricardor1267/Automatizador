@@ -1,0 +1,45 @@
+Versión v15
+Fecha: 15 de abril de 2025
+
+Integración del buscador de esquemas de tablas en el Automatizador
+==================================================================
+
+Cambios realizados:
+------------------
+
+1. Creación de un nuevo servicio para obtener esquemas de tablas
+   - Se implementó un servicio dedicado para consultar la API y obtener los esquemas de las tablas
+   - Se agregó soporte para buscar tablas relacionadas y formatear el resultado
+
+2. Desarrollo de un hook personalizado para gestionar la búsqueda
+   - Se creó useEsquemaBusqueda.js para manejar el estado y lógica de la búsqueda
+   - Se integró con la funcionalidad de notificaciones (toast)
+
+3. Actualización del componente EstructuraDatos
+   - Se añadió un formulario de búsqueda de tablas
+   - Se agregó soporte para especificar la cantidad de registros a mostrar
+   - Se implementó un indicador de carga durante la consulta
+   - Se mejoró el área de texto con estilo monoespaciado para mejor visualización
+
+Archivos modificados:
+--------------------
+
+1. /services/schema/schemaService.js (nuevo)
+2. /hooks/useEsquemaBusqueda.js (nuevo)
+3. /components/EstructuraDatos.js (modificado)
+
+Características añadidas:
+-----------------------
+
+- Consulta de esquemas de tablas directamente desde el módulo automatizador
+- Visualización de los campos de la tabla y sus relaciones
+- Inclusión de datos de ejemplo en el formato requerido
+- Integración perfecta con el flujo de trabajo existente
+- Notificaciones de éxito o error al buscar esquemas
+
+Notas adicionales:
+----------------
+
+- La funcionalidad permite a los usuarios buscar y utilizar esquemas de tablas sin necesidad de salir del módulo
+- Se mantiene y respeta la funcionalidad existente de selección de esquemas
+- La implementación sigue el patrón de separación de lógica de negocio y presentación

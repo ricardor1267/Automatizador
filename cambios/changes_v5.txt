@@ -1,0 +1,44 @@
+======================================================
+AUTOMATIZADOR DE PROMPTS PARA IA - VERSIÓN 5 (v5)
+======================================================
+
+DESCRIPCIÓN:
+------------
+Corrección de errores en la integración con OpenAI y limpieza de código.
+Se han eliminado referencias obsoletas a endpoints de Strapi para la generación de preguntas
+y prompts, y se ha mejorado el procesamiento de respuestas de la API de OpenAI.
+
+ARCHIVOS MODIFICADOS:
+---------------------
+1. /automatizador/services/api.js
+   - Eliminadas funciones para generarPreguntas y generarPromptFinal que usaban el backend
+   - Añadido valor por defecto para apiUrl (http://localhost:1337)
+   - Mantenidas solo funciones para guardarPrompt y obtenerPrompts
+
+2. /automatizador/services/openai.js
+   - Mejorada la extracción de preguntas del texto generado
+   - Añadido soporte para detectar preguntas por símbolo de interrogación
+   - Añadido filtrado para eliminar preguntas vacías
+   - Agregados logs para depuración y monitoreo de respuestas
+
+CAMBIOS FUNCIONALES:
+--------------------
+- Eliminada dependencia completa del backend para la generación de IA
+- Mejora en la detección de preguntas en diversos formatos:
+  * Listas numeradas (1., 2., etc.)
+  * Listas con viñetas (-, *, •)
+  * Oraciones que contienen signos de interrogación
+- Filtrado más robusto para asegurar que no se incluyan líneas vacías como preguntas
+- Logs adicionales para facilitar la depuración
+
+CORRECCIÓN DE ERRORES:
+--------------------
+- Corregido error 405 (Method Not Allowed) que ocurría al intentar generar preguntas
+- Eliminadas funciones redundantes que causaban conflictos
+- Mejorada la detección de diversos formatos de lista en las respuestas de OpenAI
+
+NOTAS TÉCNICAS:
+--------------
+- La aplicación ahora utiliza exclusivamente la API de OpenAI para la generación de preguntas y prompts
+- Se mantiene la conexión con Strapi solo para operaciones de guardado y recuperación de datos
+- Valores por defecto añadidos para mayor robustez

@@ -1,0 +1,39 @@
+# Cambios en la Versión 21 del Módulo Automatizador de Prompts
+
+## Resumen de Cambios
+Se ha implementado una funcionalidad que permite seleccionar diferentes proveedores de inteligencia artificial para la generación de prompts. Ahora el módulo puede interactuar con OpenAI, Anthropic Claude y Google Gemini, lo que proporciona mayor flexibilidad y opciones para la generación de contenido.
+
+## Características Implementadas
+- Selección visual de proveedor de IA (OpenAI, Anthropic Claude, Google Gemini)
+- Integración con APIs de múltiples proveedores
+- Interfaz unificada para todas las APIs
+- Manejo consistente de las diferentes respuestas
+- Almacenamiento del proveedor utilizado al guardar el prompt
+
+## Archivos Modificados
+1. `/services/iaProviders.js` (NUEVO) - Implementación de conexiones a múltiples APIs
+2. `/hooks/useAutomatizador.js` - Actualizado para soportar selección de proveedor
+3. `/components/ProveedorSelector.js` (NUEVO) - Componente UI para selección de proveedor
+4. `/components/PromptFinal.js` - Actualizado para incluir selección de proveedor en el paso final
+5. `/components/GeneracionPreguntas.js` - Actualizado para incluir selección de proveedor en paso 3
+6. `/page.js` - Actualizado para pasar propiedades de proveedores a componentes
+7. `/automatizador.css` - Agregados estilos para el selector de proveedores
+
+## Mejoras Técnicas
+- Abstracción de las APIs de IA para permitir intercambio transparente
+- Normalización de respuestas para mantener consistencia en la interfaz de usuario
+- Manejo unificado de errores para todas las APIs
+- Formatos consistentes para prompt system y prompt de usuario entre proveedores
+
+## Instrucciones para Pruebas
+1. Navegar al paso 3 (Generación de Preguntas) y seleccionar un proveedor de IA
+2. Verificar que las preguntas se generan correctamente
+3. Cambiar de proveedor y regenerar preguntas para comparar resultados
+4. Continuar al paso 4 y verificar que el proveedor seleccionado se mantiene
+5. Guardar prompt y verificar que se almacena correctamente el proveedor utilizado
+
+## Mejoras Futuras Planificadas
+- Configuración de parámetros específicos por proveedor (temperatura, tokens máximos)
+- Estadísticas de uso por proveedor
+- Comparación lado a lado de resultados entre proveedores
+- Historial de selección de proveedor por usuario

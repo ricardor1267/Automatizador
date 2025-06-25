@@ -1,0 +1,46 @@
+# Cambios en la versión v22 del módulo Automatizador
+
+## Resumen de cambios
+
+Se ha mejorado el módulo Automatizador con un sistema de fallback entre proveedores de IA (OpenAI, Anthropic y Gemini). El módulo ahora intenta con diferentes proveedores de IA si uno falla, garantizando una mayor robustez. También se ha agregado una interfaz para permitir al usuario seleccionar el proveedor de IA preferido.
+
+## Mejoras implementadas
+
+1. Sistema de fallback entre proveedores de IA:
+   - Si OpenAI falla, se intenta automáticamente con Gemini
+   - Si Gemini falla, se intenta con Anthropic
+   - El usuario recibe una notificación sobre el proveedor utilizado
+
+2. Interfaz de selección de proveedor:
+   - Nuevo componente ProveedorSelector que permite al usuario elegir el proveedor de IA
+   - Integrado en los pasos 3 (Generación de Preguntas) y 4 (Prompt Final)
+   - Muestra información sobre cada proveedor disponible
+
+3. Manejo mejorado de errores:
+   - Reintentos automáticos de peticiones a las APIs
+   - Mensajes de error más informativos
+   - Mejor experiencia de usuario cuando ocurren fallos
+
+4. Optimización de servicios:
+   - Refactorización del servicio iaProviders.js para mejor manejo de errores
+   - Mejora en la extracción de preguntas de las respuestas de IA
+   - Sistema de reintentos en las peticiones a las APIs
+
+## Archivos modificados
+
+1. `/hooks/useAutomatizador.js` - Implementación del sistema de fallback entre proveedores
+2. `/services/iaProviders.js` - Refactorización para manejo de errores y reintentos
+3. `/services/promptService.js` - Mejoras en la obtención de esquemas
+4. `/components/GeneracionPreguntas.js` - Integración del selector de proveedores
+5. `/components/PromptFinal.js` - Integración del selector de proveedores
+6. `/components/ProveedorSelector.js` - Nuevo componente para selección de proveedor
+7. `/page.js` - Actualización para soportar las nuevas funcionalidades
+
+## Próximos pasos
+
+Para futuras versiones se recomienda:
+
+1. Añadir más proveedores de IA según disponibilidad
+2. Implementar un sistema de caché para reducir llamadas a las APIs
+3. Mejorar la personalización de los prompts generados
+4. Añadir ejemplos predefinidos para usuarios principiantes

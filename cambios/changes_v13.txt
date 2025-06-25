@@ -1,0 +1,16 @@
+Cambios en la versión v13 del módulo Automatizador
+
+Fecha: 15/04/2025
+
+Resumen:
+Se ha corregido un error en el componente PromptList.js relacionado con los tooltips. El error "The target 'prompt-1' could not be identified in the dom" se producía porque se estaba intentando asociar un tooltip a un elemento que no tenía el ID correspondiente.
+
+Correcciones realizadas:
+- Se agregó el atributo id al div que contiene el texto truncado del prompt en la tabla, asignándole el valor `prompt-${prompt.id}` para que coincida con el target del tooltip.
+
+Archivos modificados:
+1. /automatizador/components/PromptList.js - Corrección del error de tooltips
+
+Notas adicionales:
+- Este tipo de errores son comunes al trabajar con componentes dinamicos y tooltips, ya que los IDs deben estar correctamente enlazados para que los tooltips puedan encontrar sus elementos target en el DOM.
+- La aplicación ahora debería funcionar sin errores en la consola del navegador.

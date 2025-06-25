@@ -1,0 +1,40 @@
+======================================================
+AUTOMATIZADOR DE PROMPTS PARA IA - VERSIÓN 7 (v7)
+======================================================
+
+DESCRIPCIÓN:
+------------
+Se ha modificado el paso 2 para aclarar que acepta cualquier tipo de texto
+descriptivo sobre la estructura de datos, no solamente JSON válido. Se han
+actualizado las etiquetas, placeholder y mensajes relacionados para reflejar
+esta flexibilidad.
+
+ARCHIVOS MODIFICADOS:
+---------------------
+1. /automatizador/components/EstructuraDatos.js
+   - Cambiado el título de "Estructura de Datos (JSON)" a "Estructura de Datos"
+   - Modificada la etiqueta para aclarar que acepta texto descriptivo
+   - Actualizado el placeholder por uno más general que no sugiere solo formato JSON
+   - Eliminada cualquier referencia a validación de formato
+
+2. /automatizador/hooks/useAutomatizador.js
+   - Modificado el mensaje de error cuando el campo está vacío
+   - Actualizado para reflejar que no se requiere específicamente un JSON
+
+3. /automatizador/components/ProgressSteps.js
+   - Actualizada la descripción del paso 2 para reflejar la flexibilidad del campo
+
+CAMBIOS FUNCIONALES:
+--------------------
+- El campo de estructura de datos ahora explicita que acepta cualquier texto descriptivo
+- Se elimina cualquier sugerencia o expectativa de que el usuario deba ingresar JSON válido
+- El mensaje de error cuando el campo está vacío ahora es más genérico
+- Se mantiene la misma funcionalidad de procesar el texto ingresado, pero con etiquetas más claras
+
+OBJETIVO DEL CAMBIO:
+------------------
+El objetivo principal de esta actualización es hacer el módulo más accesible y
+flexible para los usuarios. Al clarificar que el campo acepta cualquier tipo de texto
+descriptivo sobre la estructura de datos, se reduce la barrera de entrada y se
+permite a usuarios sin conocimiento técnico de JSON utilizar la herramienta de
+manera efectiva.

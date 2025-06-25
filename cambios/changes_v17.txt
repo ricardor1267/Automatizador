@@ -1,0 +1,49 @@
+Versión v17
+Fecha: 15 de abril de 2025
+
+Mejoras de usabilidad e interfaz de usuario
+===========================================
+
+Cambios realizados:
+------------------
+
+1. Mejoras significativas en la interfaz del componente EstructuraDatos
+   - Rediseño del buscador de esquemas con una apariencia más profesional
+   - Adición de iconos para mejorar la experiencia visual
+   - Implementación de tooltips informativos para guiar al usuario
+   - Mejora de los mensajes de ayuda y alertas informativas
+
+2. Funcionalidades adicionales en el editor de estructura de datos
+   - Opción para expandir/contraer el área de texto
+   - Botón para limpiar el contenido del editor
+   - Transiciones suaves para los cambios de tamaño
+   - Mejora en los estilos para resaltar las distintas secciones
+
+3. Mejoras en la navegación y controles
+   - Iconos en los botones para una mejor indicación visual
+   - Estilo consistente con el resto del Dashboard
+   - Mejora en el agrupamiento visual de controles relacionados
+   - Tooltips informativos para explicar la funcionalidad de cada botón
+
+Archivos modificados:
+--------------------
+
+1. /components/EstructuraDatos.js (actualizado)
+
+Mejoras en la experiencia de usuario:
+-----------------------------------
+
+- Interfaz más intuitiva y fácil de usar
+- Mejor organización visual de los elementos
+- Indicadores claros del propósito de cada control
+- Ayuda contextual mediante tooltips
+- Adaptación a diferentes tamaños de pantalla
+- Capacidad para ampliar el editor para grandes estructuras de datos
+
+Notas adicionales:
+----------------
+
+- Se mantiene toda la funcionalidad existente mientras se mejora la usabilidad
+- Las mejoras visuales siguen los estándares del template existente
+- Se ha dado especial atención a la accesibilidad y claridad visual
+- Los indicadores de estado (carga, errores, etc.) son ahora más prominentes

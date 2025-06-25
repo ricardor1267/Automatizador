@@ -1,0 +1,54 @@
+Versión v20
+Fecha: 15 de abril de 2025
+
+Mejoras en la gestión de prompts y experiencia de usuario
+========================================================
+
+Cambios realizados:
+------------------
+
+1. Ordenación y filtrado de prompts
+   - Se mejoró el servicio promptService.js para ordenar los prompts por fecha (último primero)
+   - Se implementó filtrado para mostrar solo prompts de tipo "Desarrollo" (ID: 2)
+   - Se añadió un buscador para filtrar prompts por nombre o contenido
+
+2. Mejoras en la interfaz de usuario
+   - Se agregó un campo de búsqueda en la lista lateral de prompts guardados
+   - Se mejoró la visualización de la lista con mejores estilos y badges
+   - Se añadió un botón de eliminación directa en cada ítem de la lista
+   - Se optimizó el espacio con una barra de desplazamiento vertical
+
+3. Cierre automático de modales
+   - El modal de guardado ahora se cierra automáticamente después de guardar exitosamente
+   - Se añadió un indicador visual de éxito durante el proceso de guardado
+   - Se mejoró la experiencia del usuario al eliminar pasos innecesarios
+
+4. Optimización de los procesos de guardado y carga
+   - Se actualizó el hook useAutomatizador para recargar los prompts inmediatamente después de guardar
+   - Se mejoró la compatibilidad con diferentes estructuras de datos de la API
+   - Se optimizó el manejo de errores y estados de carga
+
+Archivos modificados:
+--------------------
+
+1. /services/promptService.js
+2. /components/PromptsGuardados.js
+3. /components/PromptFinal.js
+4. /hooks/useAutomatizador.js
+
+Mejoras funcionales:
+------------------
+
+- Los prompts ahora se muestran ordenados con el más reciente primero
+- La lista lateral solo muestra prompts de tipo "Desarrollo"
+- El usuario puede buscar prompts guardados por nombre o contenido
+- Después de guardar un prompt, el modal se cierra automáticamente
+- La interfaz es más intuitiva y requiere menos clics para realizar acciones comunes
+
+Notas adicionales:
+----------------
+
+- Las mejoras implementadas responden directamente a los requisitos solicitados
+- La experiencia de usuario es ahora más fluida y coherente
+- Se mantiene la compatibilidad con la estructura de datos existente
+- Los prompts ahora siempre se guardan con tipo "Desarrollo" y permiso "Privado"

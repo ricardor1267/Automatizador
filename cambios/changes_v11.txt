@@ -1,0 +1,22 @@
+CAMBIOS EN LA VERSIÓN V11 DEL MÓDULO AUTOMATIZADOR
+Fecha: 15/04/2025
+
+DESCRIPCIÓN DE LOS CAMBIOS:
+- Se ha corregido el comportamiento del guardado de prompts para evitar el guardado duplicado
+- Se ha añadido la funcionalidad para personalizar el nombre del prompt antes de guardarlo
+- Se ha mejorado la interfaz de usuario en el modal de guardado para incluir un campo de texto editable
+- Se ha implementado la generación automática de un nombre sugerido basado en el contenido del prompt
+
+ARCHIVOS MODIFICADOS:
+1. /components/PromptFinal.js - Se modificó el componente para incluir un campo de texto para personalizar el nombre, y se cambió el comportamiento del botón de guardar para que abra el modal primero.
+2. /hooks/useAutomatizador.js - Se modificó la función guardarPromptGenerado para aceptar y usar un nombre personalizado.
+3. /services/api.js - Se actualizó la función guardarPrompt para utilizar el nombre personalizado cuando está disponible.
+
+PROBLEMAS RESUELTOS:
+- Se ha solucionado el problema de guardado duplicado al eliminar la llamada directa a guardar desde el botón principal
+- Ahora el usuario puede personalizar el nombre del prompt antes de guardarlo
+- Se ha mejorado la experiencia de usuario al proporcionar un nombre sugerido pero permitir su edición
+
+SIGUIENTES PASOS RECOMENDADOS:
+- Considerar añadir validación para evitar nombres duplicados o nombres muy cortos
+- Evaluar la posibilidad de añadir opciones de categorización adicionales al guardar prompts

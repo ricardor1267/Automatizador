@@ -1,0 +1,27 @@
+CAMBIOS EN LA VERSIÓN V10 DEL MÓDULO AUTOMATIZADOR
+Fecha: 15/04/2025
+Actualizado: 15/04/2025 (Segunda actualización)
+
+DESCRIPCIÓN DE LOS CAMBIOS:
+- Se ha implementado un filtro en la API para mostrar únicamente los Prompts de tipo "Desarrollo"
+- Se ha corregido la sintaxis del filtro para que sea compatible con la estructura relacional de Strapi
+- Se ha actualizado la lógica de transformación de datos para manejar correctamente las relaciones en Strapi
+- Se ha añadido ordenamiento para mostrar los Prompts desde el más reciente al más antiguo
+- Se ha mejorado la interfaz de usuario agregando scroll en el listado de Prompts Guardados
+- Se han añadido estilos CSS para mejorar la experiencia de usuario con el scroll
+
+ARCHIVOS MODIFICADOS:
+1. /services/api.js - Se han modificado las funciones obtenerPrompts y obtenerPrompt para manejar correctamente la estructura relacional de Strapi, asegurando que el filtrado y transformación de datos funcionen adecuadamente
+2. /components/PromptsGuardados.js - Se ha encapsulado el ListGroup dentro de un contenedor con scroll
+3. /automatizador.css - Se han añadido estilos para el contenedor con scroll y mejoras en la visualización
+
+PROBLEMAS RESUELTOS:
+- Ahora solo se muestran los prompts de tipo "Desarrollo" en la sección "Prompts Guardados", respetando la estructura relacional de la base de datos
+- Se ha corregido la transformación de datos para manejar correctamente las relaciones en Strapi
+- Los prompts se ordenan automáticamente del más reciente al más antiguo
+- Se ha mejorado la experiencia de usuario al implementar scroll cuando hay muchos prompts
+
+SIGUIENTES PASOS RECOMENDADOS:
+- Considerar implementar una opción de búsqueda dentro de los prompts guardados
+- Evaluar la posibilidad de añadir filtros adicionales (por fecha, nombre, etc.)
+- Implementar alguna funcionalidad para compartir prompts entre usuarios

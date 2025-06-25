@@ -1,0 +1,21 @@
+Cambios en la versión v14 del módulo Automatizador
+
+Fecha: 15/04/2025
+
+Resumen:
+Se ha restaurado el módulo Automatizador a su versión original, volviendo a la implementación del automatizador de prompts en 4 pasos. Se ha revertido el diseño y la funcionalidad para mantener la coherencia con el desarrollo original.
+
+Cambios realizados:
+- Se restauró page.js a su implementación original de 4 pasos
+- Se restauró automatizador.css con los estilos originales
+- Se mantuvieron los archivos de componentes originales (ProgressSteps, DescripcionProyecto, etc.)
+- Se mantuvo el hook useAutomatizador.js para la lógica de negocio
+
+Archivos restaurados:
+1. /automatizador/page.js - Restaurado para usar los componentes originales
+2. /automatizador/automatizador.css - Restaurado con los estilos originales
+
+Notas adicionales:
+- Se mantiene la conexión con la API Strapi para la gestión de prompts
+- La estructura de 4 pasos permite una creación más guiada de prompts para IA
+- Los componentes originales proporcionan una experiencia de usuario consistente con el diseño inicial del módulo
